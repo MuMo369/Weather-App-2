@@ -6,18 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
     <title>Vanilla Weather App</title>
 </head>
 <body>
     <div class = "container">
-    <h1>
-        Weather App
-    </h1>
-
-<input type="text"  placeholder="Enter city name" />
-<button type="submit">Search</button>
-
+    <div class= "weather-app">
+    
+<div class="row">
+<div class="col-9">
+<input type="text" class="form-control" placeholder="Enter city name" />
+</div>
+<div class="col-3">
+<button type="submit" class="btn btn-outline-dark">Search</button>
+</div>
+</div>
+<br/>
 <div class="row">
    <div class= "col-4">
        <ul>
@@ -56,11 +62,14 @@
         </ul>
     </div>
 </div>
+<br/>
 <div class="row">
-<div class="col-2">
-    <ul>
+<div class="col-12 col-md">
+    <div class="card h-100">
+        <div class="card-body">
+        <ul>
         <li>
-            Mo
+        Mo
         </li>
         <li>
          <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" alt="Partly Cloudy">   
@@ -68,9 +77,13 @@
         <li>
            12°C
         </li>
-    </ul>
+        </ul>
+        </div>
+    </div>
 </div>
-<div class="col-2">
+<div class="col-12 col-md">
+    <div class="card h-100">
+        <div class="card-body">
     <ul>
         <li>
             Tue
@@ -83,7 +96,11 @@
         </li>
     </ul>
 </div>
-<div class="col-2">
+</div>
+</div>
+<div class="col-12 col-md">
+    <div class="card h-100">
+        <div class="card-body">
     <ul>
         <li>
             Wed
@@ -96,7 +113,11 @@
         </li>
     </ul>
 </div>
-<div class="col-2">
+</div>
+</div>
+<div class="col-12 col-md">
+    <div class="card h-100">
+        <div class="card-body">
     <ul>
         <li>
             Thu
@@ -109,7 +130,11 @@
         </li>
     </ul>
 </div>
-<div class="col-2">
+</div>
+</div>
+<div class="col-12 col-md">
+    <div class="card h-100">
+        <div class="card-body">
     <ul>
         <li>
             Fri
@@ -123,10 +148,13 @@
     </ul>
 </div>
 </div>
+</div>
+</div>
 <small>
 <a href="https://github.com/MuMo369/Weather-App-2" target="_blank">Open source code</a> by MuMo369
 </small>
 </div>
+
     <script src="src/app.js"></script>
 </body>
 </html>
