@@ -12,179 +12,191 @@
     <title>Vanilla Weather App</title>
 </head>
 <body>
-    <div class = "container">
+<div class = "container">
     <div class= "weather-app">
-    
-<div class="row">
-<div class="col-9">
-<input type="text" class="form-control" placeholder="Enter city name" />
-</div>
-<div class="col-3">
-<button type="submit" class="btn btn-outline-dark">Search</button>
-</div>
-</div>
-<br/>
-<div class="row">
-   <div class= "col-4">
-       <ul>
-           <li>
-            New York   
-           </li>
-           <li>
-               Sunday
-           </li>
-           <li>
-               08/03/2021
-           </li>
-       </ul>
-   </div> 
-    <div class="col-4">
-        <ul>
-            <li>
-               <img src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy">
-            </li>
-            <li>
-                Partly Cloudy
-            </li>
-        </ul>
-    </div>
-    <div class="col-4">
-        <ul>
-            <li>
-              Temperature: 17°C  
-            </li>
-            <li>
-            Humidity: 60%
-            </li>
-            <li>
-            Wind: 5 km/h
-            </li>
-        </ul>
-    </div>
-</div>
-<br/>
-<div class="row">
-<div class="col-12 col-md">
-    <div class="card h-100">
-        <div class="card-body">
-        <ul>
-            <li>
-                Mo
-            </li>
-            <li>
-                09/03
-            </li>
-            <li>
-                <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" alt="Partly Cloudy">   
-            </li>
-            <li>
-                12°C
-            </li>
-            <li class="weather-description">
-                Rain showers
-            </li>
-        </ul>
+        <div class="row">
+            <div class="col-9">
+                <input type="text" class="form-control" placeholder="Enter city name" />
+            </div>
+            <div class="col-3">
+                <button type="submit" class="btn btn-outline-secondary">Search</button>
+            </div>
+        </div>
+        <div class="row" id="three-buttons">
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-warning" id="metric-button">Metric units</button>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-info" id="imperial-button">Imperial units</button>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-success" id="current-position-button">Current position</button>
+            </div>
+        </div>
+        <br/>
+        <div class="row" id="today-segment">
+            <div class= "col-4">
+                <ul>
+                    <li>
+                        <h2>
+                            New York  
+                        </h2>
+                    </li>
+                    <li>
+                        Sunday
+                    </li>
+                    <li>
+                        08/03/2021
+                    </li>
+                </ul>
+            </div> 
+            <div class="col-4" id="today-icon-segment">
+                <ul>
+                    <li>
+                        <img src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy">
+                    </li>
+                    <li>
+                        Partly Cloudy
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4" id="today-description-segment">
+                <ul>
+                    <li>
+                        Temperature: 17°C  
+                    </li>
+                    <li>
+                        Humidity: 60%
+                    </li>
+                    <li>
+                        Wind: 5 km/h
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-12 col-md">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Mo
+                            </li>
+                            <li>
+                                09/03
+                            </li>
+                            <li>
+                                <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" alt="Partly Cloudy">   
+                            </li>
+                            <li>
+                                12°C
+                            </li>
+                            <li class="weather-description">
+                                Rain showers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Tue
+                            </li>
+                            <li>
+                                10/03
+                            </li>
+                            <li>
+                                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy">
+                            </li>
+                            <li>
+                                10°C
+                            </li>
+                            <li class="weather-description">
+                                Rain showers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Wed
+                            </li>
+                            <li>
+                                11/03
+                            </li>
+                            <li>
+                                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy">
+                            </li>
+                            <li>
+                                10°C
+                            </li>
+                            <li class="weather-description">
+                                Rain showers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Thu
+                            </li>
+                            <li>
+                                12/03
+                            </li>
+                            <li>
+                                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png" alt="Light rain">
+                            </li>
+                            <li>
+                                8°C
+                            </li>
+                            <li class="weather-description">
+                            Rain showers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Fri
+                            </li>
+                            <li>
+                                13/03
+                            </li>
+                            <li>
+                                <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png" alt="Rainy">
+                            </li>
+                            <li>
+                                9°C
+                            </li>
+                            <li class="weather-description">
+                                Rain showers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="col-12 col-md">
-    <div class="card h-100">
-        <div class="card-body">
-        <ul>
-            <li>
-                Tue
-            </li>
-            <li>
-                10/03
-            </li>
-            <li>
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy">
-            </li>
-            <li>
-                10°C
-            </li>
-            <li class="weather-description">
-                Rain showers
-            </li>
-        </ul>
-        </div>
+    <div id="coded-text">
+        <a href="https://github.com/MuMo369/Weather-App-2" target="_blank">Open source code</a> by MuMo369
     </div>
 </div>
-<div class="col-12 col-md">
-    <div class="card h-100">
-        <div class="card-body">
-    <ul>
-        <li>
-            Wed
-        </li>
-        <li>
-            11/03
-        </li>
-        <li>
-            <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy">
-        </li>
-        <li>
-            10°C
-        </li>
-        <li class="weather-description">
-            Rain showers
-        </li>
-    </ul>
-</div>
-</div>
-</div>
-<div class="col-12 col-md">
-    <div class="card h-100">
-        <div class="card-body">
-    <ul>
-        <li>
-            Thu
-        </li>
-        <li>
-            12/03
-        </li>
-        <li>
-            <img src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png" alt="Light rain">
-        </li>
-        <li>
-            8°C
-        </li>
-        <li class="weather-description">
-            Rain showers
-        </li>
-    </ul>
-</div>
-</div>
-</div>
-<div class="col-12 col-md">
-    <div class="card h-100">
-        <div class="card-body">
-    <ul>
-        <li>
-            Fri
-        </li>
-        <li>
-            13/03
-        </li>
-        <li>
-            <img src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png" alt="Rainy">
-        </li>
-        <li>
-            9°C
-        </li>
-        <li class="weather-description">
-            Rain showers
-        </li>
-    </ul>
-</div>
-</div>
-</div>
-</div>
-<small>
-<a href="https://github.com/MuMo369/Weather-App-2" target="_blank">Open source code</a> by MuMo369
-</small>
-</div>
-
-    <script src="src/app.js"></script>
+<script src="src/app.js"></script>
 </body>
 </html>
