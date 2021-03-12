@@ -27,8 +27,11 @@ let day = days[currentDate.getDay()];
 let date = currentDate.getDate();
 let month = months[currentDate.getMonth()];
 let year = currentDate.getFullYear();
-nowDay.innerHTML = `${day}`;
-nowDate.innerHTML = `${date}/${month}/${year}`;
+
+let todayDay = document.querySelector ("#today-day")
+todayDay.innerHTML = `${day}`;
+let todayDate = document.querySelector ("#today-date")
+todayDate.innerHTML = `${date}/${month}/${year}`;
 
 function handleClick(event) {
   event.preventDefault();
@@ -58,16 +61,20 @@ let currentButton = document.querySelector("#current-position-button");
 currentButton.addEventListener("click", runNavigator);
 
 function showWeather(response) {
-  console.log(response);
-  document.querySelector("#city").innerHTML = response.data.name;
-  let tempRound = Math.round(response.data.main.temp);
   let temperatureToday = document.querySelector("#today-degree");
-  temperatureToday.innerHTML = `Temperature: ${tempRound}°C`;
+  temperatureToday.innerHTML = Math.round(response.data.main.temp)
   let weatherStatusToday = document.querySelector("#today-weather-status");
   weatherStatusToday.innerHTML = response.data.weather[0].description;
   let humidityToday = document.querySelector("#today-humidity");
-  humidityToday.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  humidityToday.innerHTML = response.data.main.humidity;
   let windToday = document.querySelector("#today-wind");
-  windToday.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  windToday.innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#city").innerHTML = response.data.name;
 }
 
+function showDefaultPage(enter) {
+let london = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=53aff9595b18349d32179fdacc6d01bf`;
+axios.get(`${london}`).then(showWeather);
+}
+
+showDefaultPage();
