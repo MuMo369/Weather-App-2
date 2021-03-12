@@ -15,16 +15,16 @@
 <body>
 <div class = "container">
     <div class= "weather-app">
-        <div class="row">
-            <div class="col-9">
-                <input type="text" class="form-control" placeholder="Enter city name" id="enter-city-form" />
+        <form id="search-submit">
+            <div class="row">
+                <div class="col-9">
+                    <input type="text" class="form-control" placeholder="Enter city name" id="enter-city-form" />
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-outline-secondary">Search</button>
+                </div>
             </div>
-            <div class="col-3">
-                    <form id="search-submit">
-                        <button type="submit" class="btn btn-outline-secondary">Search</button>
-                    </form>
-            </div>
-        </div>
+        </form>
         <div class="row" id="three-buttons">
             <div class="col-4">
                 <button type="button" class="btn btn-outline-warning" id="metric-button">Metric units</button>
@@ -36,7 +36,6 @@
                 <button type="button" class="btn btn-outline-success" id="current-position-button">Current position</button>
             </div>
         </div>
-        <br/>
         <div class="row" id="today-segment">
             <div class= "col-4">
                 <ul>
@@ -45,10 +44,10 @@
                             New York  
                         </h2>
                     </li>
-                    <li id="nowDay">
+                    <li id="today-day">
                         Sunday
                     </li>
-                    <li id="nowDate">
+                    <li id="today-date">
                         08/03/2021
                     </li>
                 </ul>
@@ -65,14 +64,14 @@
             </div>
             <div class="col-4" id="today-description-segment">
                 <ul>
-                    <li id="today-degree">
-                        Temperature: 17°C  
+                    <li>
+                        Temperature: <span id="today-degree"></span>°C
                     </li>
-                    <li id="today-humidity">
-                        Humidity: 60%
+                    <li>
+                        Humidity: <span id="today-humidity"></span>%
                     </li>
-                    <li id="today-wind">
-                        Wind: 5 km/h
+                    <li>
+                        Wind: <span id="today-wind"></span>m/s
                     </li>
                 </ul>
             </div>
