@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Vanilla Weather App</title>
 </head>
 <body>
@@ -16,10 +17,12 @@
     <div class= "weather-app">
         <div class="row">
             <div class="col-9">
-                <input type="text" class="form-control" placeholder="Enter city name" />
+                <input type="text" class="form-control" placeholder="Enter city name" id="enter-city-form" />
             </div>
             <div class="col-3">
-                <button type="submit" class="btn btn-outline-secondary">Search</button>
+                    <form id="search-submit">
+                        <button type="submit" class="btn btn-outline-secondary">Search</button>
+                    </form>
             </div>
         </div>
         <div class="row" id="three-buttons">
@@ -38,14 +41,14 @@
             <div class= "col-4">
                 <ul>
                     <li>
-                        <h2>
+                        <h2 id="city">
                             New York  
                         </h2>
                     </li>
-                    <li>
+                    <li id="nowDay">
                         Sunday
                     </li>
-                    <li>
+                    <li id="nowDate">
                         08/03/2021
                     </li>
                 </ul>
@@ -55,20 +58,20 @@
                     <li>
                         <img src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy">
                     </li>
-                    <li>
+                    <li id="today-weather-status">
                         Partly Cloudy
                     </li>
                 </ul>
             </div>
             <div class="col-4" id="today-description-segment">
                 <ul>
-                    <li>
+                    <li id="today-degree">
                         Temperature: 17°C  
                     </li>
-                    <li>
+                    <li id="today-humidity">
                         Humidity: 60%
                     </li>
-                    <li>
+                    <li id="today-wind">
                         Wind: 5 km/h
                     </li>
                 </ul>
