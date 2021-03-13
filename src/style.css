@@ -27,6 +27,9 @@ li:first-letter {
   text-align: center;
 }
 
+.forecast-icon {
+  max-width: 50px;
+}
 #enter-form {
   padding-left: 15px;
 }
@@ -45,6 +48,12 @@ li:first-letter {
 
 #today-segment {
   margin: 0 0px;
+}
+
+#today-icon {
+  max-width: 80px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #today-icon-segment {
