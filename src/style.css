@@ -22,16 +22,25 @@ li:first-letter {
   font-size: smaller;
 }
 
-#form-field {
-  padding-left: 27px;
+.icon-position {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#enter-form {
+  padding-left: 15px;
 }
 
 #search-button {
-  padding-right: 24px;
+  padding-left: 25px;
 }
 
 #three-buttons {
   padding: 15px;
+}
+
+#metric-button {
+  padding-left: 0;
 }
 
 #today-segment {
@@ -41,6 +50,7 @@ li:first-letter {
 #today-icon-segment {
   margin: 0 auto;
 }
+
 #today-description-segment {
   padding: 0 0 0 20px;
 }
