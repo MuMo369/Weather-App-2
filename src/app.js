@@ -33,17 +33,21 @@ todayDay.innerHTML = `${day}`;
 let todayDate = document.querySelector ("#today-date")
 todayDate.innerHTML = `${date}/${month}/${year}`;
 
+function searchCity (city) {
+let apiKey = "53aff9595b18349d32179fdacc6d01bf";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+axios.get(`${apiUrl}`).then(showWeather);
+
+}
 function handleClick(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#enter-city-form");
-  let city = document.querySelector("#city");
-  city.innerHTML = cityInput.value;
-  let apiKey = "53aff9595b18349d32179fdacc6d01bf";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&appid=${apiKey}`;
-  axios.get(`${apiUrl}`).then(showWeather);
+  searchCity (cityInput.value);
 }
-let citySearch = document.querySelector("#search-submit");
-citySearch.addEventListener("submit", handleClick);
+
+let citySubmit = document.querySelector("#search-submit");
+citySubmit.addEventListener("submit", handleClick);
+
 
 function showPosition(position) {
   let lat = position.coords.latitude;
@@ -70,11 +74,8 @@ function showWeather(response) {
   let windToday = document.querySelector("#today-wind");
   windToday.innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#city").innerHTML = response.data.name;
+  let iconToday = document.querySelector("#today-icon");
+  iconToday.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-function showDefaultPage(enter) {
-let london = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=53aff9595b18349d32179fdacc6d01bf`;
-axios.get(`${london}`).then(showWeather);
-}
-
-showDefaultPage();
+searchCity ("Oslo");
